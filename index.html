@@ -3,11 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My TypeScript Website</title>
-    <script type="module" crossorigin src="/ResumeWebsite/assets/index-rDvj2meg.js"></script>
+    <title>Evan | Software Engineer</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Main Styles -->
+    <script type="module" crossorigin src="/ResumeWebsite/assets/index-CuzUTghO.js"></script>
+    <link rel="stylesheet" crossorigin href="/ResumeWebsite/assets/index-DJGQgSqE.css">
   </head>
-  <body class="bg-gray-100 text-gray-900 font-sans p-8">
-    <div id="app"></div>
-    <!-- Vite handles the compilation of TypeScript automatically! -->
+  <body>
+    <div id="noise"></div>
+    <header class="navbar">
+      <div class="logo">E.</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="glass-panel">
+          <div class="hero-content">
+            <h1 class="glitch-text" data-text="Hi, I'm Evan.">Hi, I'm Evan.</h1>
+            <p class="role"><span id="typewriter"></span><span class="cursor">|</span></p>
+            <p class="bio">I build dynamic, high-performance web applications with a focus on premium aesthetics and seamless user experiences.</p>
+            <div class="cta-buttons">
+              <a href="#projects" class="btn primary">View My Work</a>
+              <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-wrapper glow-border">
+              <img src="/ResumeWebsite/profile.png" alt="Evan - Software Engineer" />
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </div>
+      </section>
+
+      <section id="about" class="section fade-in">
+        <h2 class="section-title">About Me</h2>
+        <div class="glass-card about-card">
+          <p>I'm a passionate software engineer who bridges the gap between sophisticated engineering and stunning design. With expertise in modern web technologies like TypeScript, React, and Vanilla CSS, I architect scalable systems that don't compromise on beauty.</p>
+          <div class="skills">
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Vanilla CSS</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section fade-in">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="glass-card project-card">
+            <div class="project-header">
+              <h3>Company Intelligence Tool</h3>
+              <span class="year">2026</span>
+            </div>
+            <p>NUS Datathon entry focused on dynamic company segmentation and intelligence. Built with a scalable data ingestion pipeline and intuitive reporting interface.</p>
+            <div class="project-links">
+              <a href="#">Live Demo ↗</a>
+              <a href="#">Source Code ↗</a>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="glass-card project-card">
+            <div class="project-header">
+              <h3>Nexus API Gateway</h3>
+              <span class="year">2025</span>
+            </div>
+            <p>A high-performance gateway service handling millions of requests with embedded rate-limiting and analytics dashboard.</p>
+            <div class="project-links">
+              <a href="#">Case Study ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section fade-in text-center">
+        <h2 class="section-title text-center">Let's Connect</h2>
+        <p class="contact-desc">Currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+        <a href="mailto:example@example.com" class="btn primary glow-btn">Say Hello</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Evan. Built with Vite + Vanilla TS.</p>
+    </footer>
+
   </body>
 </html>
