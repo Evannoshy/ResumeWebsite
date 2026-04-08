@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "lucide-react": "^1.7.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.9",
+    "tailwindcss": "^4.2.2"
+  },
+  "name": "code",
+  "version": "1.0.0",
+  "description": "Group 6 NUS Datathon 2026: Company Intelligence & Segmentation Tool  Authors: Evan, Yuxuan, Amelia, Justin, Llisha. Competition: NUS Datathon 2026",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evannoshy/ResumeWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Evannoshy/ResumeWebsite/issues"
+  },
+  "homepage": "https://github.com/Evannoshy/ResumeWebsite#readme"
+}
