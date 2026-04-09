@@ -493,7 +493,6 @@ const Footer = () => {
         
         <div className="text-slate-500 text-sm">
           <p>© {new Date().getFullYear()} Evan. All rights reserved.</p>
-          <p className="mt-2">Built with React & Tailwind CSS.</p>
         </div>
       </div>
     </footer>
