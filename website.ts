@@ -12,9 +12,7 @@ import {
   Briefcase
 } from 'lucide-react';
 
-// ==========================================
 // TYPES & INTERFACES
-// ==========================================
 
 export interface Project {
   id: string;
@@ -45,9 +43,8 @@ export interface Experience {
   skills: string[];
 }
 
-// ==========================================
+
 // DATA
-// ==========================================
 
 const PROJECTS_DATA: Project[] = [
   {
@@ -210,9 +207,9 @@ const EXPERIENCE_DATA: Experience[] = [
   }
 ];
 
-// ==========================================
+
 // COMPONENTS
-// ==========================================
+
 
 const Hero = () => {
   return (
@@ -499,9 +496,9 @@ const Footer = () => {
   );
 };
 
-// ==========================================
+
 // MAIN APP COMPONENT
-// ==========================================
+
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
