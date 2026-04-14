@@ -3,7 +3,6 @@ import {
   Mail, 
   Github, 
   Linkedin, 
-  ChevronDown, 
   Database, 
   Network, 
   Bot, 
