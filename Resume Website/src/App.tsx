@@ -10,6 +10,8 @@ import {
   Code2, 
   Briefcase
 } from 'lucide-react';
+import './index.css';
+import './App.css';
 
 // ==========================================
 // TYPES & INTERFACES
@@ -137,25 +139,25 @@ const SKILLS_DATA: SkillCategory[] = [
   {
     id: 's1',
     title: 'Data & ML',
-    icon: <Database className="w-6 h-6 text-teal-600" />,
+    icon: <Database style={{ width: 24, height: 24 }} />,
     skills: ['Python', 'Pandas', 'NumPy', 'Scikit-Learn', 'K-Means Clustering', 'Isolation Forests', 'Naive Bayes', 'KNN', 'PySpark']
   },
   {
     id: 's2',
     title: 'Systems & Integration',
-    icon: <Network className="w-6 h-6 text-teal-600" />,
+    icon: <Network style={{ width: 24, height: 24 }} />,
     skills: ['Palantir Foundry', 'Palantir AIP', 'Ontology Design', 'Data Pipelines', 'ETL', 'FastAPI', 'WebSockets']
   },
   {
     id: 's3',
     title: 'Automation & BI',
-    icon: <Bot className="w-6 h-6 text-teal-600" />,
+    icon: <Bot style={{ width: 24, height: 24 }} />,
     skills: ['Microsoft Power Automate', 'Power BI', 'PowerApps', 'Copilot Studio', 'Agentic Workflows', 'RPA']
   },
   {
     id: 's4',
     title: 'Web & Tech',
-    icon: <Code2 className="w-6 h-6 text-teal-600" />,
+    icon: <Code2 style={{ width: 24, height: 24 }} />,
     skills: ['TypeScript', 'JavaScript', 'React', 'HTML/CSS', 'Faster-Whisper', 'Qwen', 'Flan-T5', 'Web Design']
   }
 ];
@@ -163,11 +165,11 @@ const SKILLS_DATA: SkillCategory[] = [
 const EXPERIENCE_DATA: Experience[] = [
   {
     id: 'e1',
-    role: 'Software Developer: Power Platform Center of Excellence',
+    role: 'Software Developer: Power Platform CoE',
     organization: 'RAiD (RSAF Agile innovation Digital)',
     type: 'Internship',
     duration: 'Jan 2026 - Present',
-    location: 'Singapore · On-site',
+    location: 'Singapore',
     description: [
       'Engineered automated ETL pipelines (PySpark, PowerQuery) to analyze food wastage, optimizing Indent Strength ratios and driving measurable reductions in operational waste.',
       'Spearheaded the digital transformation of enterprise booking systems using PowerApps, Dataverse, and Power Automate, eliminating manual bottlenecks for 100+ personnel.',
@@ -183,7 +185,7 @@ const EXPERIENCE_DATA: Experience[] = [
     organization: 'RAiD (RSAF Agile innovation Digital)',
     type: 'Internship',
     duration: 'Oct 2025 - Present',
-    location: 'Singapore · On-site',
+    location: 'Singapore',
     description: [
       'Spearheaded the integration of Palantir Foundry for four airbases, architecting a centralized platform to automate Notice to Airmen (NOTAM) ingestion and tracking.',
       'Designed a custom Palantir AIP Workshop module with drag-and-drop workflows to parse emails, utilizing LLMs to extract unstructured text into highly structured ontology objects.',
@@ -198,7 +200,7 @@ const EXPERIENCE_DATA: Experience[] = [
     organization: 'Republic of Singapore Air Force',
     type: 'Full-time',
     duration: 'Jun 2024 - Jan 2026',
-    location: 'Singapore · On-site',
+    location: 'Singapore',
     description: [
       'Directed daily operational briefings and maintained seamless cross-functional collaboration with Air Traffic Control within a high-pressure, mission-critical control tower environment.',
       'Partnered with Palantir and the RAiD innovation team to architect Python-based data extraction pipelines, transitioning legacy processes into data-driven operations.',
@@ -215,42 +217,26 @@ const EXPERIENCE_DATA: Experience[] = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 bg-slate-50 pt-20 pb-16">
-      <div className="max-w-4xl mx-auto flex flex-col items-center">
-        <h2 className="text-teal-700 font-semibold tracking-wide uppercase text-sm mb-4">
-          Portfolio & Professional Resume
-        </h2>
-        <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6">
-          Hi, I'm Evan.
-        </h1>
-        <p className="text-xl md:text-2xl text-slate-600 font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-          Double Degree in Computer Science & Business at NUS <br className="hidden md:block"/> 
-          <span className="font-medium text-slate-800">| Software Developer & AI Integration</span>
+    <section id="hero" className="section-dark">
+      <div className="section-container content-centered">
+        <h2 className="t-sub-heading hero-subheadline" style={{marginBottom: 16}}>Portfolio & Professional Resume</h2>
+        <h1 className="hero-headline">Hi, I'm Evan.</h1>
+        <p className="hero-subheadline" style={{marginBottom: 16, fontWeight: 600}}>
+          Double Degree in Computer Science & Business at NUS
         </p>
-        <p className="text-lg text-slate-500 mb-10 max-w-2xl mx-auto">
+        <p className="hero-subheadline">Software Developer & AI Integration</p>
+        <p className="t-body" style={{maxWidth: 600, color: 'var(--white-32)'}}>
           Bridging the gap between complex data systems and actionable business insights through Machine Learning, LLMs, and workflow automation.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a 
-            href="#experience" 
-            className="px-8 py-3.5 bg-teal-700 text-white font-medium rounded-lg hover:bg-teal-800 transition-colors duration-300 shadow-sm hover:shadow-md"
-          >
-            View Experience
+        <div className="cta-group">
+          <a href="#experience" className="btn-pill">
+            View Experience <span className="chevron">&gt;</span>
           </a>
-          <a 
-            href="#projects" 
-            className="px-8 py-3.5 bg-white text-slate-700 font-medium rounded-lg border border-slate-200 hover:bg-slate-50 hover:text-teal-700 transition-colors duration-300 shadow-sm"
-          >
+          <a href="#projects" className="btn-primary">
             View Projects
           </a>
         </div>
-      </div>
-      
-      <div className="absolute bottom-10 animate-bounce text-slate-400">
-        <a href="#about" aria-label="Scroll down">
-          <ChevronDown className="w-8 h-8" />
-        </a>
       </div>
     </section>
   );
@@ -258,16 +244,16 @@ const Hero = () => {
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-white px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-900 mb-8 border-b-2 border-teal-100 pb-4 inline-block">About Me</h2>
-        <div className="prose prose-lg text-slate-600 leading-relaxed">
-          <p>
+    <section id="about" className="section-light">
+      <div className="section-container content-centered">
+        <h2 className="t-section-heading" style={{marginBottom: 48}}>About Me</h2>
+        <div style={{maxWidth: 800, textAlign: 'left', display: 'flex', flexDirection: 'column', gap: 24}}>
+          <p className="t-body">
             I am an undergraduate at the <strong>National University of Singapore (NUS)</strong> pursuing a 
             Double Degree in Computer Science and Business. My academic and professional journey 
             is driven by a passion for solving complex business problems through software engineering and automation.
           </p>
-          <p className="mt-4">
+          <p className="t-body">
             Currently serving as a Software Developer Intern at <strong>RAiD (RSAF Agile innovation Digital)</strong>, 
             I specialize in building intelligent systems. My expertise spans <strong>AI-driven pipelines, large language models (LLMs), 
             data integrations (Palantir Foundry), and enterprise automation (Power Platform)</strong>. I thrive on architecting solutions 
@@ -281,27 +267,21 @@ const About = () => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-slate-50 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Technical Expertise</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section id="skills" className="section-dark">
+      <div className="section-container">
+        <h2 className="t-section-heading content-centered" style={{marginBottom: 48}}>Technical Expertise</h2>
+        <div className="cards-grid">
           {SKILLS_DATA.map((category) => (
-            <div 
-              key={category.id} 
-              className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 flex flex-col"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 bg-teal-50 rounded-lg shrink-0">
+            <div key={category.id} className="apple-card">
+              <div style={{display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24}}>
+                <div style={{color: 'var(--apple-blue)'}}>
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 leading-tight">{category.title}</h3>
+                <h3 className="card-title">{category.title}</h3>
               </div>
-              <div className="flex flex-wrap gap-2 mt-auto">
+              <div className="card-tags" style={{marginTop: 'auto'}}>
                 {category.skills.map((skill, index) => (
-                  <span 
-                    key={index} 
-                    className="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full font-medium"
-                  >
+                  <span key={index} className="card-tag">
                     {skill}
                   </span>
                 ))}
@@ -316,46 +296,37 @@ const Skills = () => {
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-24 bg-white px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3 border-b-2 border-teal-100 pb-4 inline-flex">
-          <Briefcase className="w-8 h-8 text-teal-600" />
+    <section id="experience" className="section-light">
+      <div className="section-container">
+        <h2 className="t-section-heading content-centered" style={{marginBottom: 64, display: 'flex', alignItems: 'center', gap: 12}}>
+          <Briefcase style={{ width: 32, height: 32, color: 'var(--apple-blue)' }} />
           Professional Experience
         </h2>
         
-        <div className="space-y-12">
+        <div style={{maxWidth: 800, margin: '0 auto'}}>
           {EXPERIENCE_DATA.map((exp) => (
-            <div key={exp.id} className="relative pl-8 md:pl-0">
-              <div className="hidden md:block absolute left-[14rem] top-0 bottom-0 w-px bg-teal-100"></div>
-              
-              <div className="md:flex gap-10 items-start relative">
-                <div className="absolute left-[-2rem] md:left-[13.6rem] top-2 w-3.5 h-3.5 bg-teal-600 rounded-full ring-4 ring-white shadow-sm"></div>
-                
-                <div className="md:w-52 flex-shrink-0 mb-4 md:mb-0 text-left md:text-right pt-0.5">
-                  <div className="text-teal-700 font-bold tracking-wide text-sm mb-1">{exp.duration}</div>
-                  <div className="text-slate-800 font-semibold">{exp.organization}</div>
-                  <div className="text-slate-500 text-sm">{exp.location}</div>
-                  <div className="text-slate-400 text-xs mt-1 italic">{exp.type}</div>
+            <div key={exp.id} className="exp-item">
+              <div className="exp-header">
+                <div>
+                  <h3 className="exp-role">{exp.role}</h3>
+                  <div className="exp-org">{exp.organization} — {exp.location} ({exp.type})</div>
                 </div>
-                
-                <div className="flex-grow bg-slate-50 p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4">{exp.role}</h3>
-                  <ul className="space-y-3 mb-6">
-                    {exp.description.map((item, i) => (
-                      <li key={i} className="text-slate-600 leading-relaxed text-sm sm:text-base flex items-start">
-                        <span className="text-teal-500 mr-2 mt-1.5">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-200">
-                    {exp.skills.map((skill, index) => (
-                      <span key={index} className="px-2 py-1 bg-white border border-slate-200 text-slate-600 text-xs font-medium rounded">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                <div className="exp-meta">{exp.duration}</div>
+              </div>
+              <ul className="detail-list" style={{marginBottom: 24}}>
+                {exp.description.map((item, i) => (
+                  <li key={i}>
+                    <span className="detail-bullet">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="card-tags">
+                {exp.skills.map((skill, index) => (
+                  <span key={index} className="card-tag">
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
@@ -366,50 +337,49 @@ const ExperienceSection = () => {
 };
 
 const ProjectCard = ({ project }: { project: Project }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
-      <div className="p-8 flex-grow flex flex-col">
-        <div className="mb-4">
-          <h3 className="text-2xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors leading-tight">
-            {project.title}
-          </h3>
-          <div className="flex flex-wrap items-center gap-2 mt-2 text-sm">
-            <span className="text-teal-600 font-semibold">{project.date}</span>
-            {project.associatedWith && (
-              <>
-                <span className="text-slate-300">•</span>
-                <span className="text-slate-500">{project.associatedWith}</span>
-              </>
-            )}
-          </div>
-        </div>
-        
-        <p className="text-slate-600 mb-6 flex-grow leading-relaxed">
-          {project.description}
-        </p>
-
-        {project.details && project.details.length > 0 && (
-          <ul className="mb-6 space-y-2 text-sm text-slate-600 hidden group-hover:block transition-all">
-            {project.details.slice(0,3).map((detail, i) => (
-               <li key={i} className="flex items-start">
-                  <span className="text-teal-400 mr-2 mt-1 text-xs">▹</span>
-                  <span>{detail}</span>
-               </li>
-            ))}
-          </ul>
-        )}
-
-        <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-100">
-          {project.tags.map((tag, index) => (
-            <span 
-              key={index} 
-              className="px-2.5 py-1 bg-teal-50 text-teal-700 text-xs font-semibold rounded-md tracking-wide"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+    <div className="apple-card" style={{height: '100%'}}>
+      <h3 className="card-title">{project.title}</h3>
+      <div className="card-subtitle">
+        {project.date} {project.associatedWith ? ` • ${project.associatedWith}` : ''}
       </div>
+      <p className="card-content">{project.description}</p>
+      
+      {project.details && project.details.length > 0 && isExpanded && (
+        <ul className="detail-list" style={{marginTop: 24, animation: 'fadeIn 0.3s ease-out'}}>
+          {project.details.map((detail, i) => (
+            <li key={i}>
+              <span className="detail-bullet" style={{fontSize: 12}}>▹</span>
+              <span>{detail}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      
+      <div className="card-tags">
+        {project.tags.map((tag, index) => (
+          <span key={index} className="card-tag">
+            {tag}
+          </span>
+        ))}
+      </div>
+      
+      {project.details && project.details.length > 0 && (
+        <div style={{marginTop: 32}}>
+          <button 
+            onClick={(e) => {
+              e.preventDefault();
+              setIsExpanded(!isExpanded);
+            }} 
+            className="link-inline" 
+            style={{background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'inherit'}}
+          >
+            {isExpanded ? 'Show less' : 'Learn more'} <span className="chevron" style={{display: 'inline-block', transform: isExpanded ? 'rotate(-90deg)' : 'none', transition: 'transform 0.2s'}}>&gt;</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 };
@@ -419,15 +389,14 @@ const Projects = () => {
   const selfInitiatedProjects = PROJECTS_DATA.filter(p => p.category === 'Self-Initiated');
 
   return (
-    <section id="projects" className="py-24 bg-slate-50 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section id="projects" className="section-dark">
+      <div className="section-container">
+        <h2 className="t-section-heading content-centered" style={{marginBottom: 64}}>Projects</h2>
         
-        <div className="mb-16">
-          <div className="border-b-2 border-teal-100 pb-4 mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">Professional Projects</h2>
-            <p className="text-slate-500">Enterprise deployments and organizational initiatives.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div style={{marginBottom: 80}}>
+          <h3 className="t-tile-heading" style={{marginBottom: 8}}>Professional Deployments</h3>
+          <p className="t-body" style={{color: 'var(--white-32)', marginBottom: 32}}>Enterprise integrations and organizational initiatives.</p>
+          <div className="cards-grid">
             {professionalProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
@@ -435,17 +404,14 @@ const Projects = () => {
         </div>
 
         <div>
-          <div className="border-b-2 border-teal-100 pb-4 mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">Self-Initiated Projects</h2>
-            <p className="text-slate-500">Academic work, hackathons, and personal explorations.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h3 className="t-tile-heading" style={{marginTop: 64, marginBottom: 8}}>Self-Initiated Projects</h3>
+          <p className="t-body" style={{color: 'var(--white-32)', marginBottom: 32}}>Academic work, hackathons, and personal explorations.</p>
+          <div className="cards-grid">
             {selfInitiatedProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
@@ -453,47 +419,47 @@ const Projects = () => {
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6">Let's Connect</h2>
-        <p className="text-slate-400 mb-10 max-w-xl mx-auto text-lg">
+    <footer id="contact" className="apple-footer">
+      <div style={{maxWidth: 800, textAlign: 'center', marginBottom: 40}}>
+        <h2 className="t-section-heading" style={{marginBottom: 16}}>Let's Connect</h2>
+        <p className="t-body" style={{color: 'var(--apple-black-80)'}}>
           Whether you want to discuss data integrations, automated workflows, or potential opportunities, I'm always open to a conversation.
         </p>
-        
-        <div className="flex justify-center gap-6 mb-16">
-          <a 
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=Evantan005@gmail.com" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-slate-800 rounded-full text-slate-300 hover:text-white hover:bg-teal-700 transition-all duration-300"
-            aria-label="Email"
-          >
-            <Mail className="w-6 h-6" />
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/evan-tan-3b0b59323/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-3 bg-slate-800 rounded-full text-slate-300 hover:text-white hover:bg-teal-700 transition-all duration-300"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-6 h-6" />
-          </a>
-          <a 
-            href="https://github.com/Evannoshy" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-3 bg-slate-800 rounded-full text-slate-300 hover:text-white hover:bg-teal-700 transition-all duration-300"
-            aria-label="GitHub"
-          >
-            <Github className="w-6 h-6" />
-          </a>
-        </div>
-        
-        <div className="text-slate-500 text-sm">
-          <p>© {new Date().getFullYear()} Evan. All rights reserved.</p>
-        </div>
       </div>
+
+      <div style={{display: 'flex', gap: 24, marginBottom: 40}}>
+        <a 
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=Evantan005@gmail.com" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-inline"
+          aria-label="Email"
+        >
+          <Mail style={{width: 24, height: 24, color: 'var(--apple-near-black)'}} />
+        </a>
+        <a 
+          href="https://www.linkedin.com/in/evan-tan-3b0b59323/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="link-inline"
+          aria-label="LinkedIn"
+        >
+          <Linkedin style={{width: 24, height: 24, color: 'var(--apple-near-black)'}} />
+        </a>
+        <a 
+          href="https://github.com/Evannoshy" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="link-inline"
+          aria-label="GitHub"
+        >
+          <Github style={{width: 24, height: 24, color: 'var(--apple-near-black)'}} />
+        </a>
+      </div>
+      
+      <p className="apple-footer-text">
+        © {new Date().getFullYear()} Evan. All rights reserved. Created with Apple Design Patterns.
+      </p>
     </footer>
   );
 };
@@ -503,13 +469,7 @@ const Footer = () => {
 // ==========================================
 
 export default function App() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest('a');
@@ -518,8 +478,7 @@ export default function App() {
         e.preventDefault();
         const element = document.querySelector(anchor.hash);
         if (element) {
-          // Adjust scroll position for sticky header
-          const headerOffset = 64; 
+          const headerOffset = 48; 
           const elementPosition = element.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
   
@@ -531,33 +490,23 @@ export default function App() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
     document.addEventListener('click', handleAnchorClick);
-    
     return () => {
-      window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleAnchorClick);
     };
   }, []);
 
   return (
-    <div className="font-sans text-slate-900 bg-white selection:bg-teal-100 selection:text-teal-900">
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100 py-3' : 'bg-transparent py-5'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <a href="#" className="font-bold text-2xl text-teal-700 tracking-tight">Evan.</a>
-            <div className="hidden md:flex space-x-8 items-center">
-              <a href="#about" className="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors">About</a>
-              <a href="#skills" className="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors">Skills</a>
-              <a href="#experience" className="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors">Experience</a>
-              <a href="#projects" className="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors">Projects</a>
-              <a 
-                href="#contact" 
-                className="text-sm font-medium bg-slate-900 text-white px-5 py-2.5 rounded-lg hover:bg-teal-700 transition-colors shadow-sm"
-              >
-                Contact
-              </a>
-            </div>
+    <div>
+      <nav className="apple-nav">
+        <div className="apple-nav-container">
+          <a href="#" className="apple-nav-logo">Evan.</a>
+          <div className="apple-nav-links">
+            <a href="#about" className="apple-nav-link">About</a>
+            <a href="#skills" className="apple-nav-link">Skills</a>
+            <a href="#experience" className="apple-nav-link">Experience</a>
+            <a href="#projects" className="apple-nav-link">Projects</a>
+            <a href="#contact" className="apple-nav-link">Contact</a>
           </div>
         </div>
       </nav>
